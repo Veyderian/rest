@@ -13,7 +13,7 @@ public class RestServiceTest {
     //       "100000,60000,150000,2"
     // })
     @CsvFileSource(files = "src/test/resources/data.csv")
-    public void testCalculateRestMonthes1(int income, int expenses, int threshold, int expected) {
+    void shouilTestCalculateRestMonthes1(int income, int expenses, int threshold, int expected) {
         RestService service = new RestService();
         int actual = service.calculate(income, expenses, threshold);
         //     int expected = 3;
@@ -23,7 +23,7 @@ public class RestServiceTest {
     }
     //   @Test
 
-    //  public void testCalculateRestMonthes2() {
+    //  void shouldTestCalculateRestMonthes2() {
     //       RestService service = new RestService();
     //     int actual = service.calculate(100_000, 60_000, 150_000);
     //     int expected = 2;
